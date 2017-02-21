@@ -1,0 +1,24 @@
+.part {
+	float: left;
+	margin-top: 35px;
+	margin-left: 35px;
+}
+img {
+	max-width: 800px;
+	max-height: 550px;
+}
+.part2 {
+	min-height: 100%;
+	border-left: 1px solid gray;
+	padding: 1em;
+}
+ul {
+	list-style-type: none;
+	padding: 10px;
+}
+li {
+	margin-bottom: 8px;
+}
+.btnFixedWidth {
+	width: 140px;
+}
