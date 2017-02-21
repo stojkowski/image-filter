@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>ImageFilter</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<script type="text/javascript" src="scripts/jquery.min.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+		<script type="text/javascript" src="scripts/filters.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="part">
+				<figure>
+					<img id="image" class="img-responsive img-thumbnail" style="border: 1px solid gray" src="image.png"/>
+					<img id="original" class="img-responsive img-thumbnail" style="border: 1px solid gray; display: none;"/>
+				</figure>
+				<div style="padding-top: 10px; margin-top: 8px;">
+					<button id="fb_share" type="button" class="btn btn-primary" disabled>
+						Share on Facebook
+					</button>
+					<button id="tw_share" type="button" class="btn btn-info" style="margin-left: 15px;" disabled>
+						Share on Twitter
+					</button>
+					<input id="openDialog" style="visibility: hidden;" type="file" accept="image/*" onchange="loadFile(event)">
+				</div>
+			</div>
+
+			<div class="part part2">
+				<ul style="padding: 10px; margin-bottom: 10px;">
+					<li>
+						<button id="upload" type="button" class="btn btn-primary btnFixedWidth">
+							Upload
+						</button>
+					</li>
+					<li style="padding-bottom: 50px">
+						<div class="dropdown">
+							<button id="combo" class="btn btn-primary dropdown-toggle btnFixedWidth" type="button" data-toggle="dropdown" disabled>
+								Select a filter <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li>
+									<a id="grey" onclick="document.getElementById('combo').innerHTML = 'Filter: Grayscale'" href="#">Grayscale</a>
+								</li>
+								<li>
+									<a id="sepia" onclick="document.getElementById('combo').innerHTML = 'Filter: Sepia'" href="#">Sepia</a>
+								</li>
+								<li>
+									<a id="inverted" onclick="document.getElementById('combo').innerHTML = 'Filter: Inverted'" href="#">Inverted</a>
+								</li>
+								<li>
+									<a id="warm" onclick="document.getElementById('combo').innerHTML = 'Filter: Warm'" href="#">Warm</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<button id="download" onclick="downloadURL()" type="button" class="btn btn-success btnFixedWidth" disabled>
+							Download
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
